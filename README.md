@@ -17,6 +17,8 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 7. Find main.exe
 
+8. Make sure you have SDL3.dll in the same directory as main.exe
+
 # View the To - Do list!
 [ToDo.md][e]
 
