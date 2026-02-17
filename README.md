@@ -15,9 +15,11 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 6. Now run `cmake --build .` inside using a shell
 
-7. Find main.exe
+7. Find SpawnStar.exe in build
 
-8. Make sure you have SDL3.dll in the same directory as main.exe
+8. Make sure you have SDL3.dll in the same directory as SpawnStar.exe
+
+- SpawnStar.exe can be in any directory now, as long as SDL3.dll is in it.
 
 # View the To - Do list!
 [ToDo.md][e]

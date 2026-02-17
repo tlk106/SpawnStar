@@ -2,7 +2,7 @@
 
 ## v0.1.0
 
-- [ ] Create Window
+- [X] Create Window
 - [ ] Generate random points using a Star Class
 - [ ] Add star colour and brightness
 - [ ] Replace above with proper properties
