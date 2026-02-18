@@ -25,15 +25,12 @@
 - [ ] Refresh button
 - [ ] Polish
 
-## v0.3.0 (Star Drift)S
+## v0.3.0 (Star Drift)
 
 - [ ] Display year
 - [ ] Pause and Play buttons
 - [ ] Change year when played
 - [ ] Add rate of change properties for each star
-    - [ ] Temperature
-    - [ ] Size
-    - [ ] Absolute Luminosity
     - [ ] Star X
     - [ ] Star Y
     - [ ] Star Distance to observer

@@ -1,8 +1,10 @@
 #include <SDL3/SDL.h>
+#include "star.h"
 
 bool running = true;
 const int windowWidth = 1920;
 const int windowHeight = 1080;
+const int numberOfStars = 20;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
@@ -18,6 +20,9 @@ int main() {
         running=false;
       }
     }
+
+
+
   }
   
   SDL_Quit();
