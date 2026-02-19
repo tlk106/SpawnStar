@@ -9,12 +9,12 @@ const int windowHeight = 1080;
 bool running = true;
 
 // Stars
-const int numberOfStars = 20;
+const int numberOfStars = 3000;
 std::vector<Star> stars;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
-  SDL_Window* window = SDL_CreateWindow("Spawn Star", windowWidth, windowHeight, 0);
+  SDL_Window* window = SDL_CreateWindow("Spawn Star", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
 
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
@@ -23,13 +23,13 @@ int main() {
 
   // Create stars and put them into the star vector
   for (int i = 0; i < numberOfStars; i++) {
-      Star star;
-      stars.push_back(star); 
+    Star star;
+    stars.push_back(star); 
   }
   
   // Print everything in the star vector and print it
   for (int i = 0; i < stars.size(); i++) {
-      SDL_Log("%d, %d", stars[i].getX(), stars[i].getY());
+    SDL_Log("%d, %d", stars[i].getX(), stars[i].getY());
   }
 
   while (running) {
@@ -39,6 +39,18 @@ int main() {
         running=false;
       }
     }
+
+    // Clear
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); 
+    SDL_RenderClear(renderer);
+
+    // Render stars
+    for (int i = 0; i < stars.size(); i++) {
+      SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
+      SDL_RenderPoint(renderer, stars[i].getX(), stars[i].getY());
+    }
+
+    SDL_RenderPresent(renderer);
 
   }
   

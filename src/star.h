@@ -2,7 +2,7 @@
 class Star {
 
   public:
-    Star(int x = std::rand() % 101, int y = std::rand() % 101);
+    Star(int x = std::rand() % 10000, int y = std::rand() % 10000);
     int getX();
     int getY();
 
