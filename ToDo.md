@@ -3,7 +3,8 @@
 ## v0.1.0
 
 - [X] Create Window
-- [ ] Generate random points using a Star Class
+- [X] Generate random points using a Star Class
+- [ ] Add basic rendering
 - [ ] Add star colour and brightness
 - [ ] Replace above with proper properties
     ### Determine Classification

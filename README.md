@@ -3,7 +3,7 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 # How to run!
 
-1. Get the newest version of CMake: [Download CMake][e]
+1. Get the newest version of CMake: [Download CMake][eagain]
 
 2. Install this repo
 

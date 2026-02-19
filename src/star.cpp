@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include "star.h"
 
-Star::Star(int x = std::rand() % 101, int y = std::rand() % 101) {
+Star::Star(int x, int y) {
   sX = x;
   sY = y;
 }
