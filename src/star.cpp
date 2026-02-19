@@ -1,8 +1,9 @@
+#include <cstdlib>
 #include "star.h"
 
-Star::Star(int x, int y) {
+Star::Star(int x = std::rand() % 101, int y = std::rand() % 101) {
   sX = x;
-	sY = y;
+  sY = y;
 }
 
 int Star::getX(){
