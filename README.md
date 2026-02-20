@@ -9,7 +9,7 @@ A C++ SDL3 app that procedurally generates stars on your screen.
 
 3. Install this repo
 
-4. Make a directory called "build".
+4. Make a directory called "build" inside the root folder.
 
 5. Go into build
 
