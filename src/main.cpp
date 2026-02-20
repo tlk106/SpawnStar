@@ -2,6 +2,7 @@
 #include <vector>
 #include <ctime>
 #include "star.h"
+#include "random.h"
 
 // Window
 const int windowWidth = 1920;
@@ -46,7 +47,7 @@ int main() {
 
     // Render stars
     for (int i = 0; i < stars.size(); i++) {
-      SDL_SetRenderDrawColor(renderer, stars[i].getRed(), stars[i].getGreen(), stars[i].getBlue(), stars[i].getBrightness()); 
+      SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
       SDL_RenderPoint(renderer, stars[i].getX(), stars[i].getY());
     }
 
