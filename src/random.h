@@ -1,6 +1,2 @@
 #pragma once
-class Random {
-
-  public:
-    int random(int min, int max);
-};
+int randInt(int min, int max);
