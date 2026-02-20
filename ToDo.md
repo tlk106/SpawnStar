@@ -5,7 +5,7 @@
 - [X] Create Window
 - [X] Generate random points using a Star Class
 - [X] Add basic rendering
-- [ ] Add star colour and brightness
+- [X] Add star colour and brightness
 - [ ] Replace above with proper properties
     ### Determine Classification
     - [ ] Temperature
