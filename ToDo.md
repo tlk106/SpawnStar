@@ -5,19 +5,18 @@
 - [X] Create Window
 - [X] Generate random points using a Star Class
 - [X] Add basic rendering
-- [X] Add star colour and brightness
-- [ ] Replace above with proper properties
-    ### Determine Classification
-    - [ ] Temperature
-    - [ ] Size
-    - [ ] Absolute Luminosity
+- [X] Add star colour and brightness (Short Lived Code for testing)
+- [X] Replace above with proper properties
+    ### Determine ClassiSfication
+    - [X] Temperature
+    - [X] Size
     ### Don't Determine Classification
-    - [ ] Star X
-    - [ ] Star Y
-    - [ ] Star Distance to observer
-- [ ] Determine classification to get colour and a part of the luminocity
-- [ ] Change luminocity based on distance.
-- [ ] Use an image based on Final luminocity and Final Colour
+    - [X] Star X
+    - [X] Star Y
+    - [X] Star Distance to observer
+- [ ] Star Classification Function
+- [ ] Select Image based on classification
+- [ ] Create multiple images of classification for distance
 - [ ] Polish
 
 ## v0.2.0 (UI Update)

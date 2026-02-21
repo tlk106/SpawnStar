@@ -29,8 +29,8 @@ int main() {
   }
   
   // Print everything in the star vector and print it
-  for (int i = 0; i < stars.size(); i++) {
-    SDL_Log("%d, %d", stars[i].getX(), stars[i].getY());
+  for (int i = 1; i < stars.size(); i++) {
+    SDL_Log("X: %d,\nY: %d,\nTemperature: %d Kelvin,\nSolar Radius: %f,\nDistance (Light Years): %f\n-------", stars[i].getX(), stars[i].getY(), stars[i].getTemperature(), stars[i].getSolarRadius(), stars[i].getDistance());
   }
 
   while (running) {
