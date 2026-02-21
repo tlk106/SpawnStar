@@ -1,8 +1,8 @@
 #include <SDL3/SDL.h>
 #include <vector>
 #include <ctime>
-#include "star.h"
-#include "random.h"
+#include "star.hpp"
+#include "random.hpp"
 
 // Window
 const int windowWidth = 1920;

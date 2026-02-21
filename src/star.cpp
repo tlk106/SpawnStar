@@ -1,4 +1,4 @@
-#include "star.h"
+#include "star.hpp"
 
 Star::Star(int x, int y, int temperatureK, float solarRadius, float distance) {
   sX = x;

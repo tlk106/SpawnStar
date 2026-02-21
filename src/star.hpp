@@ -1,5 +1,5 @@
 #pragma once
-#include "random.h"
+#include "random.hpp"
 class Star {
 
   public:

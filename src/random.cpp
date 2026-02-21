@@ -1,5 +1,5 @@
 #include <random>
-#include "random.h"
+#include "random.hpp"
 
 int randInt(int min, int max) {
     std::random_device dev;
