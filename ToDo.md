@@ -15,17 +15,18 @@
     - [X] Star Distance to observer
     - [X] Size
     ### Need to be calculated
-    - [ ] Absolute Luminosity: How the star looks 32.6 light years away (This is for the star class)
-    - [ ] Apparent luminosity: How the star looks distance light years away (This is for rendering)
+    - [ ] Luminosity (This is for the star class)
+    - [ ] Magnitude
 
 - [ ] Star Classification Function
-    - [ ] Temperature / Spectral Type: (M, K, G, F, A, B, O), 1-9 for each class. Like G2 or 2K
-    - [ ] Absolute Luminosity / Luminosity Class: (I, II, III, ...)
-    - This should look like G2V or K2II
+    - [ ] Spectral Type, based on temperature: (M, K, G, F, A, B, O)
+    - [ ] Subclass, gives more specific temperature: (1 to 9)
+    - [ ] Luminosity Class, also gives life stage of the star: (I, II, III, ...)
+    - This should look like G2V, K5II or F3IV
 
 - [ ] Render Stars
-    - [ ] Colour Rendering based on star class letter
-    - [ ] Brightness Rendering based on apparent roman numeral
+    - [ ] Colour Rendering based on star Spectral Type
+    - [ ] Brightness Rendering based on Luminosity Class
     - [ ] Make it render a star like shape
 
 - [ ] Polish
