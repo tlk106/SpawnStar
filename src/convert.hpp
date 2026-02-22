@@ -1,10 +1,13 @@
 #pragma once
 
-int wattsToSolarLuminosity(int watts);
-int solarLuminosityToWatts(int solarLuminosity);
+double wattsToSolarLuminosity(double watts);
+double solarLuminosityToWatts(double solarLuminosity);
 
-int metersToLightYears(int meters);
-int lightYearsToMeters(int lightYears);
+double metersToLightYears(double meters);
+double lightYearsToMeters(double lightYears);
 
-int metersToSolarRadius(int meters);
-int solarRadiusToMeters(int solarRadius);
+double metersToSolarRadius(double meters);
+double solarRadiusToMeters(double solarRadius);
+
+double parsecsToLightYears(double parsecs);
+double lightYearsToParsecs(double lightyear);

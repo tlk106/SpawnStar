@@ -3,6 +3,7 @@
 #include <ctime>
 #include "star.hpp"
 #include "random.hpp"
+#include "convert.hpp"
 
 // Window
 const int windowWidth = 1920;
@@ -30,7 +31,7 @@ int main() {
   
   // Print everything in the star vector and print it
   for (int i = 0; i < stars.size(); i++) {
-    SDL_Log("X: %d,\nY: %d,\nTemperature: %d Kelvin,\nSolar Radius: %f,\nDistance (Light Years): %f\n-------", stars[i].getX(), stars[i].getY(), stars[i].getTemperature(), stars[i].getSolarRadius(), stars[i].getDistance());
+    SDL_Log("X: %d,\nY: %d,\nTemperature: %d Kelvin,\nSolar Radius: %f,\nDistance (Light Years): %f,\nSolar Luminosity: %f,\nAbsolute Magnitude: %f,\nApparent Magnitude: %f,\n-------", stars[i].getX(), stars[i].getY(), stars[i].getTemperature(), stars[i].getSolarRadius(), stars[i].getDistance(), wattsToSolarLuminosity(stars[i].getLuminosity()), stars[i].getAbsoluteMagnitude(), stars[i].getApparentMagnitude());
   }
 
   while (running) {

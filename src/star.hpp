@@ -3,17 +3,22 @@
 class Star {
 
   public:
-    Star(int x = randInt(0, 4000), int y = randInt(0, 4000), int temperatureK = randInt(1500, 12000), float solarRadius = randFloat(0.3, 6), float distance = randFloat(0.5, 400));
+    Star(int x = randInt(0, 4000), int y = randInt(0, 4000), int temperatureK = randInt(1500, 12000), double solarRadius = randFloat(0.3, 6), double distance = randFloat(0.5, 400));
     int getX();
     int getY();
     int getTemperature();
-    float getSolarRadius();
-    float getDistance();
+    double getSolarRadius();
+    double getDistance();
+
+    // Calculated
+    double getLuminosity();
+    double getAbsoluteMagnitude();
+    double getApparentMagnitude();
 
   private:
     int sX;
     int sY;
     int sTemperatureK;
-    float sSolarRadius;
-    float sDistance;
+    double sSolarRadius;
+    double sDistance;
 };

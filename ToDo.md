@@ -15,8 +15,9 @@
     - [X] Star Distance to observer
     - [X] Size
     ### Need to be calculated
-    - [ ] Luminosity (This is for the star class)
-    - [ ] Magnitude
+    - [X] Luminosity (This is for the star class)
+    - [X] Absolute Magnitude (This is needed to calculate apparent)
+    - [X] Apparent Magnitude (This is how the star looks at the specific distance)
 
 - [ ] Star Classification Function
     - [ ] Spectral Type, based on temperature: (M, K, G, F, A, B, O)
