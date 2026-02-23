@@ -1,5 +1,6 @@
 #include "star.hpp"
 #include "convert.hpp"
+#include "random.hpp"
 #include <cmath>
 
 const double pi = 3.14159265359;
@@ -81,4 +82,8 @@ std::string Star::getSpectralType() {
   else {
     return "Unknown";
   }
+}
+
+std::string Star::getLuminosityClass() {
+  
 }
