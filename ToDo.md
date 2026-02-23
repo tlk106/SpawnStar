@@ -20,9 +20,9 @@
     - [X] Apparent Magnitude (This is how the star looks at the specific distance)
 
 - [ ] Star Classification Function
-    - [ ] Spectral Type, based on temperature: (M, K, G, F, A, B, O)
-    - [ ] Subclass, gives more specific temperature: (1 to 9)
+    - [X] Spectral Type, based on temperature: (M, K, G, F, A, B, O), and a subclass (1 to 9)
     - [ ] Luminosity Class, also gives life stage of the star: (I, II, III, ...)
+    - [ ] Function to combine the two
     - This should look like G2V, K5II or F3IV
 
 - [ ] Render Stars
