@@ -72,7 +72,7 @@ double Star::calculateMass() {
 }
 
 double Star::getSurfaceGravity() {
-  return (gravitationalConstant * sMass) / pow(sSolarRadius, 2);
+  return (gravitationalConstant * solarMassToKilograms(getMass())) / pow(solarRadiusToMeters(getSolarRadius()), 2);
 }
 
 std::string Star::getSpectralType() {
@@ -113,5 +113,5 @@ std::string Star::getSpectralType() {
 }
 
 std::string Star::getLuminosityClass() {
-  
+  return 0;
 }
