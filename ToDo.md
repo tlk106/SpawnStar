@@ -9,16 +9,17 @@
 - [X] Add star colour and brightness (Short Lived Code for testing)
 - [X] Get proper properties
     ### Given
-    - [X] Temperature
     - [X] Star X
     - [X] Star Y
+    - [X] Temperature
     - [X] Star Distance to observer
-    - [X] Size
+    - [X] Radius
     ### Need to be calculated
     - [X] Luminosity
     - [X] Absolute Magnitude (This is needed to calculate apparent)
     - [X] Apparent Magnitude (This is how the star looks at the specific distance)
-    - [ ] Star Surface Gravity (I need this for Luminosity class. Because of a misnomer I thought this was for the luminosity class. This will be randomly generated based on the radius.)
+    - [X] Mass (Needed for surface gravity)
+    - [X] Star Surface Gravity (I need this for Luminosity class. Because of a misnomer I thought this was for the luminosity class. This will be randomly generated based on the radius.)
 
 - [ ] Star Classification Function
     - [X] Spectral Type, based on temperature: (M, K, G, F, A, B, O), and a subclass (1 to 9)

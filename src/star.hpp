@@ -4,7 +4,7 @@
 class Star {
 
   public:
-    Star(int x = randInt(0, 4000), int y = randInt(0, 4000), int temperatureK = randInt(2300, 12000), double solarRadius = randFloat(0.3, 6), double distance = randFloat(0.5, 400));
+    Star(int x = randInt(0, 4000), int y = randInt(0, 4000), int temperatureK = randInt(2300, 12000), double solarRadius = randFloat(0.3, 12), double distance = randFloat(0.5, 400));
     int getX();
     int getY();
     int getTemperature();
@@ -15,6 +15,9 @@ class Star {
     double getLuminosity();
     double getAbsoluteMagnitude();
     double getApparentMagnitude();
+    double calculateMass();
+    double getMass();
+    double getSurfaceGravity();
 
     // Classification
     std::string getSpectralType();
@@ -27,4 +30,5 @@ class Star {
     int sTemperatureK;
     double sSolarRadius;
     double sDistance;
+    double sMass;
 };

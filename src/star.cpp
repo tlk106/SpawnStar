@@ -6,6 +6,7 @@
 const double pi = 3.14159265359;
 const double stefanBoltzmanConstant = 5.6704e-8;
 const double zeroPointLuminosity = 3.0128e28;
+const double gravitationalConstant = 6.6743e-11;
 
 Star::Star(int x, int y, int temperatureK, double solarRadius, double distance) {
   sX = x;
@@ -13,6 +14,7 @@ Star::Star(int x, int y, int temperatureK, double solarRadius, double distance) 
   sTemperatureK = temperatureK;
   sSolarRadius = solarRadius;
   sDistance = distance;
+  sMass = Star::calculateMass();
 }
 
 int Star::getX(){
@@ -45,6 +47,32 @@ double Star::getAbsoluteMagnitude() {
 
 double Star::getApparentMagnitude() {
   return (getAbsoluteMagnitude() - 5 + (5 * log10(lightYearsToParsecs(sDistance))));
+}
+
+double Star::getMass() {
+  return sMass;
+}
+
+double Star::calculateMass() {
+  if (sSolarRadius >= 12) {
+    return randFloat(10, 20);
+  }
+  else if (sSolarRadius >= 5) {
+    return randFloat(2, 10);
+  }
+  else if (sSolarRadius >= 1.5) {
+    return randFloat(0.7, 2);
+  }
+  else if (sSolarRadius >= 0.7) {
+    return randFloat(0.08, 0.7);
+  }
+  else {
+    return randFloat(0.08, 0.4);
+  }
+}
+
+double Star::getSurfaceGravity() {
+  return (gravitationalConstant * sMass) / pow(sSolarRadius, 2);
 }
 
 std::string Star::getSpectralType() {

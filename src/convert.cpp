@@ -25,3 +25,11 @@ double parsecsToLightYears(double parsecs) {
 double lightYearsToParsecs(double lightyear) {
 	return lightyear/3.262;
 }
+
+double solarMassToKilograms(double solarMass) {
+  return solarMass*1.989e30;
+}
+
+double KilogramsToSolarMass(double Kilograms) {
+  return Kilograms/1.989e30;
+}
