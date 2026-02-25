@@ -19,10 +19,10 @@
     - [X] Apparent Magnitude (This is how the star looks at the specific distance)
     - [X] Mass (Needed for surface gravity)
     - [X] Star Surface Gravity (I need this for Luminosity class. Because of a misnomer I thought luminosity was for the luminosity class. This will be randomly generated based on the radius.)
-- [ ] Star Classification Function
+- [X] Star Classification Function
     - [X] Spectral Type, based on temperature: (M, K, G, F, A, B, O), and a subclass (1 to 9)
-    - [ ] Luminosity Class, also gives life stage of the star: (I, II, III, ...)
-    - [ ] Function to combine the two
+    - [X] Luminosity Class, also gives life stage of the star: (I, II, III, ...)
+    - [X] Function to combine the two
     - This should look like G2V, K5II or F3IV
 - [ ] Render Stars
     - [ ] Colour Rendering based on star Spectral Type

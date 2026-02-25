@@ -113,5 +113,30 @@ std::string Star::getSpectralType() {
 }
 
 std::string Star::getLuminosityClass() {
-  return 0;
+  double surfaceGraivityCentimeters = getSurfaceGravity() * 100;
+  if (log10(surfaceGraivityCentimeters) >= 4.5) {
+    return "VI";
+  }
+  else if (log10(surfaceGraivityCentimeters) >= 4) {
+    return "V";
+  }
+  else if (log10(surfaceGraivityCentimeters) >= 3) {
+    return "IV";
+  }
+  else if (log10(surfaceGraivityCentimeters) >= 2) {
+    return "III";
+  }
+  else if (log10(surfaceGraivityCentimeters) >= 1.5) {
+    return "II";
+  }
+  else if (log10(surfaceGraivityCentimeters) >= 0) {
+    return "I";
+  }
+  else {
+    return "Unknown";
+  }
+}
+
+std::string Star::getFinalClass() {
+  return getSpectralType() + getLuminosityClass();
 }
