@@ -1,6 +1,6 @@
 # To Do
 
-## v1.0.0 
+## v0.1.0 
 #### ETA 2026/02/28
 - [X] Create Window
 - [X] Generate random points using a Star Class
@@ -30,14 +30,14 @@
     - [ ] Make it render a star like shape
 - [ ] Polish
 
-## v1.1.1 (Accuracy & Realism)
+## v0.1.1 (Accuracy & Realism)
 #### ETA 2025/03/05
 - [ ] Make certian stars more common than others
     - [ ] More cooler stars
     - [ ] Make type V (main sequence) stars the most common and other types the least
 - [ ] Polish 
 
-## 1.2.0 (UI Update)
+## v0.2.0 (UI Update)
 #### ETA 2025/03/14
 - [ ] Show star properties on hover
 - [ ] Refresh button
@@ -45,7 +45,7 @@
 - [ ] Comment out anything printed with ```SDL_LOG```
 
 
-## v1.3.0 (Star Drift)
+## v0.3.0 (Star Drift)
 #### ETA 2025/04/06
 - [ ] Display year
 - [ ] Pause and Play buttons
