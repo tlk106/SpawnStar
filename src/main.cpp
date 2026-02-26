@@ -31,7 +31,19 @@ int main() {
   
   // Print everything in the star vector and print it
   for (int i = 0; i < stars.size(); i++) {
-    SDL_Log("X: %d,\nY: %d,\nTemperature: %d Kelvin,\nSolar Radius: %f,\nDistance (Light Years): %f,\nSolar Luminosity: %f,\nAbsolute Magnitude: %f,\nApparent Magnitude: %f,\nMass: %f,\nSurface gravity: %f,\nSpecteral Class: %s,\nLuminosity Class: %s,\n-------", stars[i].getX(), stars[i].getY(), stars[i].getTemperature(), stars[i].getSolarRadius(), stars[i].getDistance(), wattsToSolarLuminosity(stars[i].getLuminosity()), stars[i].getAbsoluteMagnitude(), stars[i].getApparentMagnitude(), stars[i].getMass(), stars[i].getSurfaceGravity(), stars[i].getSpectralType().c_str(), stars[i].getLuminosityClass().c_str());
+    SDL_Log("X: %d", stars[i].getX());
+    SDL_Log("Y: %d", stars[i].getY());
+    SDL_Log("Temperature: %d Kelvin", stars[i].getTemperature());
+    SDL_Log("Solar Radius: %f", stars[i].getSolarRadius());
+    SDL_Log("Distance (Light Years): %f", stars[i].getDistance());
+    SDL_Log("Solar Luminosity: %f", wattsToSolarLuminosity(stars[i].getLuminosity()));
+    SDL_Log("Absolute Magnitude: %f", stars[i].getAbsoluteMagnitude());
+    SDL_Log("Apparent Magnitude: %f", stars[i].getApparentMagnitude());
+    SDL_Log("Mass: %f", stars[i].getMass());
+    SDL_Log("Surface Gravity: %f", stars[i].getSurfaceGravity());
+    SDL_Log("Spectral Class: %s", stars[i].getSpectralType().c_str());
+    SDL_Log("Luminosity Class: %s", stars[i].getLuminosityClass().c_str());
+    SDL_Log("-------");
   }
 
   while (running) {
