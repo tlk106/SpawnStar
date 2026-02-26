@@ -145,7 +145,30 @@ std::string Star::getFinalClass() {
 
 // Rendering
 std::array<int,3> Star::getRenderingColour() {
-  return {0, 0, 0};
+  if (getSpectralType()[0] == 'M') {
+    return {255, 170, 70};
+  }
+  else if (getSpectralType()[0] == 'K') {
+    return {255, 174, 107};
+  }
+  else if (getSpectralType()[0] == 'G') {
+    return {255, 235, 209};
+  }
+  else if (getSpectralType()[0] == 'F') {
+    return {255, 244, 245};
+  }
+  else if (getSpectralType()[0] == 'A') {
+    return {224, 230, 255};
+  }
+  else if (getSpectralType()[0] == 'B') {
+    return {186, 204, 255};
+  }
+  else if (getSpectralType()[0] == 'B') {
+    return {186, 204, 255};
+  }
+  else {
+    return {218, 112, 214};
+  }
 }
 
 int Star::getRenderingBrightness() {
