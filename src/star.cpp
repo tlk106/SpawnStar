@@ -75,6 +75,8 @@ double Star::getSurfaceGravity() {
   return (gravitationalConstant * solarMassToKilograms(getMass())) / pow(solarRadiusToMeters(getSolarRadius()), 2);
 }
 
+
+// Classification
 std::string Star::getSpectralType() {
   int subClass;
   if (sTemperatureK >= 10000) {
@@ -139,4 +141,13 @@ std::string Star::getLuminosityClass() {
 
 std::string Star::getFinalClass() {
   return getSpectralType() + getLuminosityClass();
+}
+
+// Rendering
+std::array<int,3> Star::getRenderingColour() {
+  return {0, 0, 0};
+}
+
+int Star::getRenderingBrightness() {
+  return 0;
 }

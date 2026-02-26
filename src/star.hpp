@@ -1,6 +1,8 @@
 #pragma once
 #include "random.hpp"
 #include <string>
+#include <array>
+
 class Star {
 
   public:
@@ -23,6 +25,10 @@ class Star {
     std::string getSpectralType();
     std::string getLuminosityClass();
     std::string getFinalClass();
+
+    // Rendering
+    std::array<int,3> getRenderingColour();
+    int getRenderingBrightness();
 
   private:
     int sX;
