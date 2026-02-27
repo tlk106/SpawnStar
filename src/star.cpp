@@ -196,28 +196,28 @@ std::array<int,3> Star::getRenderingColour() {
   if (starClass == "F9") {return {255, 247, 252};}
 
   // A
-  if (starClass == "A0") {return {185, 201, 255};}
-  if (starClass == "A1") {return {181, 199, 255};}
-  if (starClass == "A2") {return {187, 203, 255};}
-  if (starClass == "A3") {return {191, 207, 255};}
-  if (starClass == "A4") {return {197, 211, 255};}
-  if (starClass == "A5") {return {202, 215, 255};}
-  if (starClass == "A6") {return {199, 212, 255};}
-  if (starClass == "A7") {return {200, 213, 255};}
-  if (starClass == "A8") {return {213, 222, 255};}
-  if (starClass == "A9") {return {219, 224, 255};}
+  if (starClass == "A0") {return {175, 201, 255};}
+  if (starClass == "A1") {return {171, 199, 255};}
+  if (starClass == "A2") {return {177, 203, 255};}
+  if (starClass == "A3") {return {181, 207, 255};}
+  if (starClass == "A4") {return {187, 211, 255};}
+  if (starClass == "A5") {return {192, 215, 255};}
+  if (starClass == "A6") {return {189, 212, 255};}
+  if (starClass == "A7") {return {190, 213, 255};}
+  if (starClass == "A8") {return {203, 222, 255};}
+  if (starClass == "A9") {return {209, 224, 255};}
 
   // B
-  if (starClass == "B0") {return {156, 178, 255};}
-  if (starClass == "B1") {return {160, 182, 255};}
-  if (starClass == "B2") {return {160, 180, 255};}
-  if (starClass == "B3") {return {165, 185, 255};}
-  if (starClass == "B4") {return {164, 184, 255};}
-  if (starClass == "B5") {return {170, 191, 255};}
-  if (starClass == "B6") {return {172, 189, 255};}
-  if (starClass == "B7") {return {173, 191, 255};}
-  if (starClass == "B8") {return {177, 195, 255};}
-  if (starClass == "B9") {return {181, 198, 255};}
+  if (starClass == "B0") {return {136, 178, 255};}
+  if (starClass == "B1") {return {140, 182, 255};}
+  if (starClass == "B2") {return {140, 180, 255};}
+  if (starClass == "B3") {return {145, 185, 255};}
+  if (starClass == "B4") {return {144, 184, 255};}
+  if (starClass == "B5") {return {150, 191, 255};}
+  if (starClass == "B6") {return {152, 189, 255};}
+  if (starClass == "B7") {return {153, 191, 255};}
+  if (starClass == "B8") {return {157, 195, 255};}
+  if (starClass == "B9") {return {161, 198, 255};}
 
   return {127, 0, 255};
 }
