@@ -29,9 +29,20 @@ int main() {
     Star star;
     stars.push_back(star); 
   }
+
+  // Kill stars so the program runs better!
+  int counter = 0;
+  for (int i = 0; i < stars.size(); i++) {
+    if (stars[i].getRenderingBrightness() <= 10) {
+      stars.erase(stars.begin() + i);
+      counter++;
+      i--;
+    }
+  }
   
   // Print everything in the star vector and print it
   for (int i = 0; i < stars.size(); i++) {
+    SDL_Log("Star Number: #%d", i);
     SDL_Log("X: %d", stars[i].getX());
     SDL_Log("Y: %d", stars[i].getY());
     SDL_Log("Temperature: %d Kelvin", stars[i].getTemperature());
@@ -47,6 +58,8 @@ int main() {
     SDL_Log("RGB Alpha: %d", stars[i].getRenderingBrightness());
     SDL_Log("-------");
   }
+
+  SDL_Log("Stars Executed: %d", counter);
 
   while (running) {
     while(SDL_PollEvent(&event)) {
