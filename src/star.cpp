@@ -223,5 +223,12 @@ std::array<int,3> Star::getRenderingColour() {
 }
 
 int Star::getRenderingBrightness() {
-  return 0;
+  double pogsonMagnitudeFormula = pow(10, -0.4 * (getApparentMagnitude() - 1));
+  int rgbAlpha = int(pogsonMagnitudeFormula * 255);
+  if (rgbAlpha > 255) {
+    return 255;
+  }
+  else {
+    return rgbAlpha;
+  }
 }

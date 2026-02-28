@@ -26,7 +26,7 @@
     - This should look like G2V, K5II or F3IV
 - [ ] Render Stars
     - [X] Colour Rendering based on star Spectral Type
-    - [ ] Brightness Rendering based on Luminosity Class
+    - [X] Brightness Rendering based on Magnitude
     - [ ] Make it render a star like shape
 - [ ] Polish
 

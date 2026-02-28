@@ -20,6 +20,7 @@ int main() {
 
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
+  SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
   std::srand(std::time(nullptr));
 
@@ -43,6 +44,7 @@ int main() {
     SDL_Log("Surface Gravity: %f", stars[i].getSurfaceGravity());
     SDL_Log("Spectral Class: %s", stars[i].getSpectralType().c_str());
     SDL_Log("Luminosity Class: %s", stars[i].getLuminosityClass().c_str());
+    SDL_Log("RGB Alpha: %d", stars[i].getRenderingBrightness());
     SDL_Log("-------");
   }
 
@@ -57,10 +59,10 @@ int main() {
     // Clear
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); 
     SDL_RenderClear(renderer);
-
+    
     // Render stars
     for (int i = 0; i < stars.size(); i++) {
-      SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], 255); 
+      SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], stars[i].getRenderingBrightness()); 
       SDL_RenderPoint(renderer, stars[i].getX(), stars[i].getY());
     }
 
