@@ -28,6 +28,10 @@
     - [X] Colour Rendering based on star Spectral Type
     - [X] Brightness Rendering based on Magnitude
     - [ ] Make it render a star like shape
+        - [ ] Glow
+            - [ ] Center
+            - [ ] Outer
+        - [ ] Diffraction spikes on larger magnitudes
 - [ ] Polish
 
 ## v0.1.1 (Accuracy & Realism)
