@@ -4,6 +4,17 @@
 #include "star.hpp"
 #include "random.hpp"
 #include "convert.hpp"
+#include <math.h>
+
+void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) {
+  for (int x = -radius; x <= radius; x++) {
+    for (int y = -radius; y <= radius; y++) {
+      if (x*x + y*y <= radius*radius) {
+        SDL_RenderPoint(renderer, x+originX, y+originY);
+      }
+    }
+  }
+}
 
 // Window
 const int windowWidth = 1920;
