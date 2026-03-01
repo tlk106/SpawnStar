@@ -44,7 +44,7 @@ int main() {
   // Kill stars so the program runs better!
   int counter = 0;
   for (int i = 0; i < stars.size(); i++) {
-    if (stars[i].getRenderingBrightness() <= 10) {
+    if (stars[i].getRenderingBrightness() <= 0) {
       stars.erase(stars.begin() + i);
       counter++;
       i--;

@@ -228,14 +228,20 @@ int Star::getRenderingBrightness() {
   if (rgbAlpha > 255) {
     return 255;
   }
+  else if (rgbAlpha < 50) {
+    return rgbAlpha + 20;
+  }
   else {
     return rgbAlpha;
   }
 }
 
 int Star::getCenterGlowRadius() {
-  if (getRenderingBrightness() <= 51) {
+  if (getRenderingBrightness() <= 10) {
     return 1;
+  }
+  else if (getRenderingBrightness() <= 51) {
+    return 2;
   }
   else if (getRenderingBrightness() <= 102) {
     return 2;
@@ -244,7 +250,7 @@ int Star::getCenterGlowRadius() {
     return 2;
   }
   else if (getRenderingBrightness() <= 204) {
-    return 3;
+    return 2;
   }
   else if (getRenderingBrightness() <= 255) {
     return 3;
