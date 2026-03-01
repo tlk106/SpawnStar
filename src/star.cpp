@@ -232,3 +232,24 @@ int Star::getRenderingBrightness() {
     return rgbAlpha;
   }
 }
+
+int Star::getCenterGlowRadius() {
+  if (getRenderingBrightness() <= 51) {
+    return 1;
+  }
+  else if (getRenderingBrightness() <= 102) {
+    return 2;
+  }
+  else if (getRenderingBrightness() <= 153) {
+    return 2;
+  }
+  else if (getRenderingBrightness() <= 204) {
+    return 3;
+  }
+  else if (getRenderingBrightness() <= 255) {
+    return 3;
+  }
+  else {
+    return 0;
+  }
+}

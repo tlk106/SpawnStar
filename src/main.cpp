@@ -88,10 +88,15 @@ int main() {
     for (int i = 0; i < stars.size(); i++) {
       SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], stars[i].getRenderingBrightness()); 
       SDL_RenderPoint(renderer, stars[i].getX(), stars[i].getY());
+
+      // Center Glow
+      for (int j = stars[i].getCenterGlowRadius(); j > 0; j--) {
+        SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], (stars[i].getRenderingBrightness() / 5)); 
+        renderCircle(renderer, stars[i].getX(), stars[i].getY(), j);
+      }
     }
 
     SDL_RenderPresent(renderer);
-
   }
   
   SDL_Quit();

@@ -29,6 +29,7 @@ class Star {
     // Rendering
     std::array<int,3> getRenderingColour();
     int getRenderingBrightness();
+    int getCenterGlowRadius();
 
   private:
     int sX;

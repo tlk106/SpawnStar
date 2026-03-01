@@ -29,7 +29,7 @@
     - [X] Brightness Rendering based on Magnitude
     - [ ] Make it render a star like shape
         - [ ] Glow
-            - [ ] Center
+            - [X] Center
             - [ ] Outer
         - [ ] Diffraction spikes on larger magnitudes
 - [ ] Polish
