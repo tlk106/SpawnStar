@@ -89,6 +89,7 @@ int main() {
         SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], (stars[i].getRenderingBrightness() / 5)); 
         renderCircle(renderer, stars[i].getX(), stars[i].getY(), j);
       }
+    }
 
     SDL_RenderPresent(renderer);
   }
