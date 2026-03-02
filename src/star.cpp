@@ -252,8 +252,11 @@ int Star::getCenterGlowRadius() {
   else if (getRenderingBrightness() <= 204) {
     return 2;
   }
-  else if (getRenderingBrightness() <= 255) {
+  else if (getRenderingBrightness() < 255) {
     return 3;
+  }
+  else if (getRenderingBrightness() == 255) {
+    return 4;
   }
   else {
     return 0;
