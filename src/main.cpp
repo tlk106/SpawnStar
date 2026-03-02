@@ -90,10 +90,6 @@ int main() {
         renderCircle(renderer, stars[i].getX(), stars[i].getY(), j);
       }
 
-      // Defraction spike 1
-      SDL_RenderLine(renderer, stars[i].getDiffractionSpikeDimension()[0], stars[i].getDiffractionSpikeDimension()[1], stars[i].getDiffractionSpikeDimension()[2], stars[i].getDiffractionSpikeDimension()[3]);
-    }
-
     SDL_RenderPresent(renderer);
   }
   

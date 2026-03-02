@@ -24,12 +24,10 @@
     - [X] Luminosity Class, also gives life stage of the star: (I, II, III, ...)
     - [X] Function to combine the two
     - This should look like G2V, K5II or F3IV
-- [ ] Render Stars
+- [X] Render Stars
     - [X] Colour Rendering based on star Spectral Type
     - [X] Brightness Rendering based on Magnitude
-    - [ ] Make it render a star like shape
-        - [X] Glow
-        - [ ] Diffraction spikes on larger magnitudes
+    - [X] Make it render a star like shape
 - [ ] Polish
 
 ## v0.1.1 (Accuracy & Realism)
