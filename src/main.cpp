@@ -6,6 +6,7 @@
 #include "convert.hpp"
 #include <math.h>
 
+// Function to render circles
 void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) {
   for (int x = -radius; x <= radius; x++) {
     for (int y = -radius; y <= radius; y++) {
@@ -28,11 +29,9 @@ std::vector<Star> stars;
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
   SDL_Window* window = SDL_CreateWindow("Spawn Star", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
-
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
-
   std::srand(std::time(nullptr));
 
   // Create stars and put them into the star vector
@@ -41,6 +40,7 @@ int main() {
     stars.push_back(star); 
   }
 
+  // Delete half of the brightest stars because there are too many
   for (int i = 0; i < stars.size(); i++) {
     if (stars[i].getRenderingBrightness() == 255 && randBool()) {
       stars.erase(stars.begin() + i);
@@ -68,6 +68,7 @@ int main() {
   }
 
   while (running) {
+    // Check if the user quits
     while(SDL_PollEvent(&event)) {
       if(event.type == SDL_EVENT_QUIT){
         SDL_Log("User Quit");

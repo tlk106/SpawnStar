@@ -77,6 +77,7 @@ double Star::getSurfaceGravity() {
 
 
 // Classification
+
 std::string Star::getSpectralType() {
   int subClass;
   if (sTemperatureK >= 10000) {
@@ -144,6 +145,7 @@ std::string Star::getFinalClass() {
 }
 
 // Rendering
+
 std::array<int,3> Star::getRenderingColour() {
   const std::string starClass = getSpectralType();
 
