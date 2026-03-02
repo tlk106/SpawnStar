@@ -259,3 +259,8 @@ int Star::getCenterGlowRadius() {
     return 0;
   }
 }
+
+std::array<int,4> Star::getDiffractionSpikeDimension() {
+  int length = getCenterGlowRadius() * 2;
+  return {(getX() - length), (getY() - length), (getX() + length), (getY() + length)};
+}

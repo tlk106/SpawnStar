@@ -30,6 +30,7 @@ class Star {
     std::array<int,3> getRenderingColour();
     int getRenderingBrightness();
     int getCenterGlowRadius();
+    std::array<int,4> getDiffractionSpikeDimension();
 
   private:
     int sX;
