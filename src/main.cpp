@@ -40,6 +40,13 @@ int main() {
     Star star;
     stars.push_back(star); 
   }
+
+  for (int i = 0; i < stars.size(); i++) {
+    if (stars[i].getRenderingBrightness() == 255 && randBool()) {
+      stars.erase(stars.begin() + i);
+      i--;
+    }
+  }
   
   // Print everything in the star vector and print it
   for (int i = 0; i < stars.size(); i++) {
@@ -77,7 +84,7 @@ int main() {
       SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], stars[i].getRenderingBrightness()); 
       SDL_RenderPoint(renderer, stars[i].getX(), stars[i].getY());
 
-      // Center Glow
+      // Glow
       for (int j = stars[i].getCenterGlowRadius(); j > 0; j--) {
         SDL_SetRenderDrawColor(renderer, stars[i].getRenderingColour()[0], stars[i].getRenderingColour()[1], stars[i].getRenderingColour()[2], (stars[i].getRenderingBrightness() / 5)); 
         renderCircle(renderer, stars[i].getX(), stars[i].getY(), j);
