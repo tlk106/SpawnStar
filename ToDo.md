@@ -1,7 +1,6 @@
 # To Do
 
 ## v0.1.0 
-#### ETA 2026/03/02
 - [X] Create Window
 - [X] Generate random points using a Star Class
 - [X] Add basic rendering
@@ -31,14 +30,12 @@
 - [ ] Polish
 
 ## v0.1.1 (Accuracy & Realism)
-#### ETA 2025/03/04
 - [ ] Make certian stars more common than others
     - [ ] More cooler stars
     - [ ] Make type V (main sequence) stars the most common and other types the least
 - [ ] Polish 
 
 ## v0.2.0 (UI Update)
-#### ETA 2025/03/12
 - [ ] Show star properties on hover
 - [ ] Refresh button
 - [ ] Polish
@@ -46,7 +43,6 @@
 
 
 ## v0.3.0 (Star Drift)
-#### ETA 2025/04/06
 - [ ] Display year
 - [ ] Pause and Play buttons
 - [ ] Change year when played
