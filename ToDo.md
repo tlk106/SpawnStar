@@ -1,6 +1,6 @@
 # To Do
 
-## v0.1.0 
+## v0.1.0
 - [X] Create Window
 - [X] Generate random points using a Star Class
 - [X] Add basic rendering
@@ -27,7 +27,7 @@
     - [X] Colour Rendering based on star Spectral Type
     - [X] Brightness Rendering based on Magnitude
     - [X] Make it render a star like shape
-- [ ] Polish
+- [X] Polish
 
 ## v0.1.1 (Accuracy & Realism)
 - [ ] Make certian stars more common than others

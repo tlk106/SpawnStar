@@ -1,4 +1,4 @@
-# SpawnStar
+# SpawnStar v0.1.0
 A C++ SDL3 app that procedurally generates stars on your screen.
 I made this to learn OOP and get better at C++.
 
