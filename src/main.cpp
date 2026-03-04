@@ -23,7 +23,7 @@ const int windowHeight = 1080;
 bool running = true;
 
 // Stars
-const int numberOfStars = 3000;
+const int numberOfStars = 10000;
 std::vector<Star> stars;
 
 int main() {
