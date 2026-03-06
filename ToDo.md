@@ -30,9 +30,9 @@
 - [X] Polish
 
 ## v0.1.1 (Accuracy & Realism)
-- [ ] Make certian stars more common than others
-    - [ ] More cooler stars
-    - [ ] Make type V (main sequence) stars the most common and other types the least
+- [X] Make certian stars more common than others
+    - [X] More cooler stars
+    - [X] Make type V (main sequence) stars the most common and other types the least
 - [ ] Polish 
 
 ## v0.2.0 (UI Update)

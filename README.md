@@ -1,15 +1,14 @@
-# SpawnStar v0.1.0
+# SpawnStar v0.1.1
 A C++ SDL3 app that procedurally generates stars on your screen.
-I made this to learn OOP and get better at C++.
 
 <img width="1920" height="1023" alt="image" src="https://github.com/user-attachments/assets/36627618-ff3b-44a5-82b8-a37f8569459e" />
 
-# View the To - Do list!
+# View the To - Do list.
 [ToDo.md][e]
 
-# How to run!
+# How to build.
 
-1. Get a C++ compiler, You can just get VS Code and use the C/C++ extenstion.
+1. Get a C++ compiler
 
 2. Get the newest version of CMake: [Download CMake][eagain]
 
