@@ -54,20 +54,11 @@ double Star::getMass() {
 }
 
 double Star::calculateMass() {
-  if (sSolarRadius >= 12) {
-    return randFloat(10, 20);
-  }
-  else if (sSolarRadius >= 5) {
-    return randFloat(2, 10);
-  }
-  else if (sSolarRadius >= 1.5) {
-    return randFloat(0.7, 2);
-  }
-  else if (sSolarRadius >= 0.7) {
-    return randFloat(0.08, 0.7);
+  if (randFloat(0, 1) > 0.75) {
+    return sSolarRadius * randFloat(0.02, 0.4);
   }
   else {
-    return randFloat(0.08, 0.4);
+    return sSolarRadius * randFloat(0.9, 4.5);
   }
 }
 
@@ -119,19 +110,19 @@ std::string Star::getLuminosityClass() {
   double surfaceGraivityCentimeters = getSurfaceGravity() * 100;
   double logGravity = log10(surfaceGraivityCentimeters);
 
-  if (logGravity >= 4) {
+  if (logGravity >= 5) {
     return "VI";
   }
-  else if (logGravity >= 3) {
+  else if (logGravity >= 3.25) {
     return "V";
   }
-  else if (logGravity >= 2) {
+  else if (logGravity >= 3) {
     return "IV";
   }
-  else if (logGravity >= 1) {
+  else if (logGravity >= 2.5) {
     return "III";
   }
-  else if (logGravity >= 0.5) {
+  else if (logGravity >= 2) {
     return "II";
   }
   else if (logGravity >= 0) {
