@@ -26,7 +26,7 @@ bool randBool() {
 }
 
 int randomTemperature() {
-  if (randFloat(0, 1) > 0.25) {
+  if (randFloat(0, 1) > 0.40) {
     return randInt(2300, 5000);
   }
   else {
