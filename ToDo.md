@@ -33,7 +33,7 @@
 - [X] Make certian stars more common than others
     - [X] More cooler stars
     - [X] Make type V (main sequence) stars the most common and other types the least
-- [ ] Polish 
+- [X] Polish 
 
 ## v0.2.0 (UI Update)
 - [ ] Show star properties on hover
