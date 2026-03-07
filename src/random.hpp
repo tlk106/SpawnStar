@@ -2,3 +2,4 @@
 int randInt(int min, int max);
 float randFloat(float min, float max);
 bool randBool();
+int randomTemperature();

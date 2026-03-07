@@ -24,3 +24,12 @@ bool randBool() {
 
   return dist6(rng) == 1;
 }
+
+int randomTemperature() {
+  if (randFloat(0, 1) > 0.40) {
+    return randInt(2300, 5000);
+  }
+  else {
+    randInt(2300, 10000);
+  }
+}
