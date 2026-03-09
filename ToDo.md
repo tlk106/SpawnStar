@@ -36,9 +36,9 @@
 - [X] Polish 
 
 ## v0.1.2 (Resolution)
-- [ ] Get user screen dimensions
-    - [ ] Make it available on every file
-- [ ] Generatate stars only in the users' screen dimensions
+- [X] Get user screen dimensions
+    - [X] Make it available on every file
+- [X] Generatate stars only in the users' screen dimensions
 - [ ] Change the amount of stars that are generated based on the dimensions
 
 ## v0.2.0 (UI Update)
