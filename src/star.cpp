@@ -1,6 +1,7 @@
 #include "star.hpp"
 #include "convert.hpp"
 #include "random.hpp"
+#include "main.cpp"
 #include <cmath>
 
 const double pi = 3.14159265359;

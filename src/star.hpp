@@ -6,7 +6,7 @@
 class Star {
 
   public:
-    Star(int x = randInt(0, 4000), int y = randInt(0, 4000), int temperatureK = randomTemperature(), double solarRadius = randFloat(0.3, 12), double distance = randFloat(0.5, 400));
+    Star(int x = randomStarXPosition(), int y = randomStarYPosition(), int temperatureK = randomStarTemperature(), double solarRadius = randFloat(0.3, 12), double distance = randFloat(0.5, 400));
     int getX();
     int getY();
     int getTemperature();

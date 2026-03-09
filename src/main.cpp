@@ -1,10 +1,11 @@
 #include <SDL3/SDL.h>
 #include <vector>
 #include <ctime>
+#include <math.h>
 #include "star.hpp"
 #include "random.hpp"
 #include "convert.hpp"
-#include <math.h>
+#include "globalVariables.hpp"
 
 // Function to render circles
 void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) {
@@ -18,8 +19,8 @@ void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) 
 }
 
 // Window
-const int windowWidth = 1920;
-const int windowHeight = 1080;
+int windowWidth = 1920; // Default window width
+int windowHeight = 1080; // Defualt window height
 bool running = true;
 
 // Stars
@@ -33,6 +34,9 @@ int main() {
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
   std::srand(std::time(nullptr));
+
+  // Get the window height and width
+  SDL_GetWindowSizeInPixels(window, &windowHeight, &windowWidth);
 
   // Create stars and put them into the star vector
   for (int i = 0; i < numberOfStars; i++) {
@@ -64,6 +68,8 @@ int main() {
     SDL_Log("Spectral Class: %s", stars[i].getSpectralType().c_str());
     SDL_Log("Luminosity Class: %s", stars[i].getLuminosityClass().c_str());
     SDL_Log("RGB Alpha: %d", stars[i].getRenderingBrightness());
+    SDL_Log("Window Height: %d", windowHeight);
+    SDL_Log("Window Width: %d", windowWidth);
     SDL_Log("-------");
   }
 
