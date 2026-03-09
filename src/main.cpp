@@ -19,8 +19,8 @@ void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) 
 }
 
 // Window
-int windowWidth = 1920; // Default window width
-int windowHeight = 1080; // Defualt window height
+int windowWidth;
+int windowHeight;
 bool running = true;
 
 // Stars
@@ -36,7 +36,7 @@ int main() {
   std::srand(std::time(nullptr));
 
   // Get the window height and width
-  SDL_GetWindowSizeInPixels(window, &windowHeight, &windowWidth);
+  SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
 
   // Create stars and put them into the star vector
   for (int i = 0; i < numberOfStars; i++) {

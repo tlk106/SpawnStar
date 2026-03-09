@@ -1,3 +1,3 @@
 #pragma once
-int windowWidth;
-int windowHeight;
+extern int windowWidth;
+extern int windowHeight;

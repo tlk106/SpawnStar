@@ -39,6 +39,6 @@ int randomStarXPosition() {
   return randInt(0, windowWidth);
 }
 
-int randomStaryPosition() {
+int randomStarYPosition() {
   return randInt(0, windowHeight);
 }
