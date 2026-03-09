@@ -24,7 +24,7 @@ int windowHeight;
 bool running = true;
 
 // Stars
-const int numberOfStars = 10000;
+int numberOfStars;
 std::vector<Star> stars;
 
 int main() {
@@ -37,6 +37,8 @@ int main() {
 
   // Get the window height and width
   SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
+
+  numberOfStars = (windowWidth * windowHeight) / 1000;
 
   // Create stars and put them into the star vector
   for (int i = 0; i < numberOfStars; i++) {
@@ -68,10 +70,12 @@ int main() {
     SDL_Log("Spectral Class: %s", stars[i].getSpectralType().c_str());
     SDL_Log("Luminosity Class: %s", stars[i].getLuminosityClass().c_str());
     SDL_Log("RGB Alpha: %d", stars[i].getRenderingBrightness());
-    SDL_Log("Window Height: %d", windowHeight);
-    SDL_Log("Window Width: %d", windowWidth);
     SDL_Log("-------");
   }
+
+  SDL_Log("Window Height: %d", windowHeight);
+  SDL_Log("Window Width: %d", windowWidth);
+  SDL_Log("Number of stars: %d", numberOfStars);
 
   while (running) {
     // Check if the user quits
