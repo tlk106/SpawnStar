@@ -1,10 +1,11 @@
 #include <SDL3/SDL.h>
 #include <vector>
 #include <ctime>
+#include <math.h>
 #include "star.hpp"
 #include "random.hpp"
 #include "convert.hpp"
-#include <math.h>
+#include "globalVariables.hpp"
 
 // Function to render circles
 void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) {
@@ -18,21 +19,26 @@ void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) 
 }
 
 // Window
-const int windowWidth = 1920;
-const int windowHeight = 1080;
+int windowWidth;
+int windowHeight;
 bool running = true;
 
 // Stars
-const int numberOfStars = 10000;
+int numberOfStars;
 std::vector<Star> stars;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
-  SDL_Window* window = SDL_CreateWindow("Spawn Star", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
+  SDL_Window* window = SDL_CreateWindow("Spawn Star v0.1.2", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
   std::srand(std::time(nullptr));
+
+  // Get the window height and width
+  SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
+
+  numberOfStars = (windowWidth * windowHeight) / 1000;
 
   // Create stars and put them into the star vector
   for (int i = 0; i < numberOfStars; i++) {
@@ -66,6 +72,10 @@ int main() {
     SDL_Log("RGB Alpha: %d", stars[i].getRenderingBrightness());
     SDL_Log("-------");
   }
+
+  SDL_Log("Window Height: %d", windowHeight);
+  SDL_Log("Window Width: %d", windowWidth);
+  SDL_Log("Number of initial stars (Before removal of some): %d", numberOfStars);
 
   while (running) {
     // Check if the user quits

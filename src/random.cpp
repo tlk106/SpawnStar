@@ -1,5 +1,6 @@
 #include <random>
 #include "random.hpp"
+#include "globalVariables.hpp"
 
 int randInt(int min, int max) {
   std::random_device dev;
@@ -25,11 +26,19 @@ bool randBool() {
   return dist6(rng) == 1;
 }
 
-int randomTemperature() {
+int randomStarTemperature() {
   if (randFloat(0, 1) > 0.40) {
     return randInt(2300, 5000);
   }
   else {
     randInt(2300, 10000);
   }
+}
+
+int randomStarXPosition() {
+  return randInt(0, windowWidth);
+}
+
+int randomStarYPosition() {
+  return randInt(0, windowHeight);
 }

@@ -35,6 +35,12 @@
     - [X] Make type V (main sequence) stars the most common and other types the least
 - [X] Polish 
 
+## v0.1.2 (Resolution)
+- [X] Get user screen dimensions
+    - [X] Make it available on every file
+- [X] Generatate stars only in the users' screen dimensions
+- [X] Change the amount of stars that are generated based on the dimensions
+
 ## v0.2.0 (UI Update)
 - [ ] Show star properties on hover
 - [ ] Refresh button
