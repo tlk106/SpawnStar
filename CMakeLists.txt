@@ -15,7 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(SDL3)
 
-add_executable(SpawnStar src/main.cpp src/star.cpp src/random.cpp src/convert.cpp)
+add_executable(SpawnStar src/main.cpp src/star.cpp src/random.cpp src/convert.cpp src/button.cpp)
 
 target_link_libraries(SpawnStar PRIVATE
   SDL3::SDL3

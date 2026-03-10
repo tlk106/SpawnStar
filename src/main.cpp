@@ -6,6 +6,7 @@
 #include "random.hpp"
 #include "convert.hpp"
 #include "globalVariables.hpp"
+#include "button.hpp"
 
 // Function to render circles
 void renderCircle(SDL_Renderer *renderer, int originX, int originY, int radius) {
@@ -26,6 +27,9 @@ bool running = true;
 // Stars
 int numberOfStars;
 std::vector<Star> stars;
+
+// Buttons
+Button refreshButton("Refresh Button", 500, 500, 100, 100, "img/refreshButton");
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
@@ -101,6 +105,9 @@ int main() {
         renderCircle(renderer, stars[i].getX(), stars[i].getY(), j);
       }
     }
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
+    refreshButton.renderButton(renderer);
 
     SDL_RenderPresent(renderer);
   }
