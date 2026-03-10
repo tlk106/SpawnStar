@@ -29,7 +29,7 @@ std::vector<Star> stars;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
-  SDL_Window* window = SDL_CreateWindow("Spawn Star", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
+  SDL_Window* window = SDL_CreateWindow("Spawn Star v0.1.2", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
@@ -75,7 +75,7 @@ int main() {
 
   SDL_Log("Window Height: %d", windowHeight);
   SDL_Log("Window Width: %d", windowWidth);
-  SDL_Log("Number of stars: %d", numberOfStars);
+  SDL_Log("Number of initial stars (Before removal of some): %d", numberOfStars);
 
   while (running) {
     // Check if the user quits
