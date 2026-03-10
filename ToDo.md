@@ -42,11 +42,16 @@
 - [X] Change the amount of stars that are generated based on the dimensions
 
 ## v0.2.0 (UI Update)
-- [ ] Show star properties on hover
 - [ ] Refresh button
-- [ ] Polish
+- [ ] Star Slider
+    - [ ] Make a settings.txt
+    - [ ] Save settings inside using ```<fstream>```
+- [ ] Show star properties on hover
+    - [ ] Make background
+    - [ ] Get the text
+    - [ ] Polish
+- [ ] Polish everything else
 - [ ] Comment out anything printed with ```SDL_LOG```
-
 
 ## v0.3.0 (Star Drift)
 - [ ] Display year
