@@ -35,7 +35,7 @@ std::vector<Star> stars;
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
-  SDL_Window* window = SDL_CreateWindow("Spawn Star v0.1.2", windowWidth, windowHeight, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
+  SDL_Window* window = SDL_CreateWindow("Spawn Star v0.1.2", 384, 216, SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED);
   SDL_Event event;
   SDL_Renderer* renderer = SDL_CreateRenderer(window, nullptr);
   SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
@@ -44,6 +44,9 @@ int main() {
   // Get the window height and width
   SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
 
+  SDL_SetWindowMinimumSize(window, 192, 108);
+
+  // Make the star density always 1 star per 1000 pixels
   numberOfStars = (windowWidth * windowHeight) / 1000;
 
   // Create stars and put them into the star vector
