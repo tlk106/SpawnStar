@@ -24,12 +24,14 @@ int windowWidth;
 int windowHeight;
 bool running = true;
 
+// Mouse
+float mouseX;
+float mouseY;
+bool isMouseDown;
+
 // Stars
 int numberOfStars;
 std::vector<Star> stars;
-
-// Buttons
-Button refreshButton("Refresh Button", 500, 500, 100, 100, "img/refreshButton");
 
 int main() {
   SDL_Init(SDL_INIT_VIDEO);
@@ -82,12 +84,37 @@ int main() {
   SDL_Log("Number of initial stars (Before removal of some): %d", numberOfStars);
 
   while (running) {
+    // Keep updating fo the buttons to be able to move. 
+    SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
+
+    // Buttons
+    Button refreshButton("Refresh Button", windowWidth - 105, 35, 75, 75, "img/refreshButton");
+
     // Check if the user quits
     while(SDL_PollEvent(&event)) {
       if(event.type == SDL_EVENT_QUIT){
         SDL_Log("User Quit");
         running=false;
       }
+      else if (event.type == SDL_EVENT_MOUSE_MOTION) {
+        mouseX = event.motion.x;
+        mouseY = event.motion.y;
+      }
+      else if (event.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
+        if (event.button.button == SDL_BUTTON_LEFT) {
+          isMouseDown = true;
+        }
+      }
+      else if (event.type == SDL_EVENT_MOUSE_BUTTON_UP) {
+        if (event.button.button == SDL_BUTTON_LEFT) {
+          isMouseDown = false;
+        }
+      }
+    }
+
+    // Refresh button detection
+    if (refreshButton.isTouching() && isMouseDown) {
+      SDL_Log("Refresh Button Pressed");
     }
 
     // Clear

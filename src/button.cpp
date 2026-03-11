@@ -1,5 +1,6 @@
 #include <SDL3/SDL.h>
 #include "button.hpp"
+#include "globalVariables.hpp"
 
 Button::Button(std::string id, int x, int y, int width, int height, std::string image) {
   this->id = id;
@@ -16,6 +17,10 @@ void Button::renderButton(SDL_Renderer *renderer) {
 }
 
 bool Button::isTouching() {
-  // (Not finished yet btw)
-  return true;
+  if ((mouseX >= x && mouseX <= (x + width)) && (mouseY >= y && mouseY <= (y + height))) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
