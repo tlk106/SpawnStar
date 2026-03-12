@@ -91,7 +91,7 @@ int main() {
     SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
 
     // Buttons
-    Button refreshButton("Refresh Button", windowWidth - 105, 35, 75, 75, "img/refreshButton");
+    Button refreshButton("Refresh Button", windowWidth - 60, 10, 50, 50, "img/refreshButton");
 
     // Check if the user quits
     while(SDL_PollEvent(&event)) {
