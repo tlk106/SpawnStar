@@ -11,9 +11,13 @@ Button::Button(std::string id, int x, int y, int width, int height, std::string 
   this->image = image;
 }
 
-void Button::renderButton(SDL_Renderer *renderer) {
+void Button::renderButton(SDL_Renderer* renderer) {
   SDL_FRect button = { (float)x, (float)y, (float)width, (float)height };
-  SDL_RenderFillRect(renderer, &button);
+  SDL_Surface* surface = SDL_LoadBMP(image.c_str());
+  SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+  SDL_DestroySurface(surface);
+  SDL_RenderTexture(renderer, texture, nullptr, &button);
+  SDL_DestroyTexture(texture);
 }
 
 bool Button::isTouching() {

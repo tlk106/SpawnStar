@@ -91,7 +91,7 @@ int main() {
     SDL_GetWindowSizeInPixels(window, &windowWidth, &windowHeight);
 
     // Buttons
-    Button refreshButton("Refresh Button", windowWidth - 60, 10, 50, 50, "img/refreshButton");
+    Button refreshButton("Refresh Button", windowWidth - 90, 10, 80, 80, "img/Refresh_icon.bmp");
 
     // Check if the user quits
     while(SDL_PollEvent(&event)) {
@@ -136,8 +136,9 @@ int main() {
       }
     }
 
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
     refreshButton.renderButton(renderer);
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); 
 
     SDL_RenderPresent(renderer);
   }
